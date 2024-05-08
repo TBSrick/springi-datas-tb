@@ -6,10 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gêneros</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
+    <div class="container">
     <h1>Gêneros</h1>
-    <a href="/generos/insert">Novo gênero</a>
+    <a href="/generos/insert" class="btn btn-primary">Novo gênero</a>
      <table>
         <tr>
             <th>ID</th>
@@ -21,11 +23,12 @@
                 <td>${item.id}</td>
                 <td>${item.nome}</td>
                 <td>
-                    <a href="/generos/update?id=${item.id}">Editar</a>
-                    <a href="/generos/delete?id=${item.id}">Excluir</a>
+                    <a href="/generos/update?id=${item.id}" class="btn btn-primary">Editar</a>
+                    <a href="/generos/delete?id=${item.id}" class="btn btn-danger">Excluir</a>
                 </td>
             </tr>
             </c:forEach>
      </table>
+    </div>
 </body>
 </html>
